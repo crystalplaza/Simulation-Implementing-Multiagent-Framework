@@ -1,13 +1,19 @@
-/*
- * creaed by Xiaoli Tong on 4/14
- */
-
 package pdt;
 
 import mvc.*;
 import simstation.*;
 
-public class pdtFactory extends SimulationFactory{
-	public Model makeModel() {return new PDTournament();}
+/**
+ * pdtfactory extend superclass SimulationFactory. It override one method
+ * makeModel() in superclass
+ *
+ */
+public class pdtFactory extends SimulationFactory {
+	/**
+	 * constructor, override the constructor in superclass
+	 */
+	public Model makeModel() {
+		return new PDTournament();
+	}
 
 }

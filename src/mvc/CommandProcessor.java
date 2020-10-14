@@ -1,13 +1,14 @@
 package mvc;
 
 public class CommandProcessor {
-	
-	public static void execute(Command commd) {  // no need to add anything?
-		// TODO Auto-generated method stub
-		
+	/**
+	 * it will execute the command.
+	 * 
+	 * @param commd the command which will execute
+	 */
+	public static void execute(Command commd) {
 		commd.execute();
-		
-	}
 
+	}
 
 }

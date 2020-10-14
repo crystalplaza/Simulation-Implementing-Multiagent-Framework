@@ -5,7 +5,10 @@ import java.io.*;
 import java.util.Random;
 
 import javax.swing.*;
-
+/**
+ * utilities class contain method that will used frequently in subclass
+ *
+ */
 public class Utilities{
 	
 	// asks user a yes/no question

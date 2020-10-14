@@ -1,18 +1,18 @@
-/*
- * created by Xiaoli Tong on 4/13
- * edited by Yunlin Xie on 4/14
- */
-
 package pdt;
 
-public class AlwaysCooperate extends Strategy{
+/**
+ * create one strategy class, AlwaysCooperate. It has one method, cooperate
+ *
+ */
+public class AlwaysCooperate extends Strategy {
 	public AlwaysCooperate() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public boolean cooperate()
-	{
+	/**
+	 * it always return true with AlwaysCooperate strategy
+	 */
+	public boolean cooperate() {
 		return true;
 	}
 }

@@ -1,16 +1,25 @@
 
-
 package simstation;
 
 import mvc.*;
 
-public class StopCommand extends Command{
-
+/**
+ * extends superclass from mvc package. Stop the simulation
+ *
+ */
+public class StopCommand extends Command {
+	/**
+	 * constructor, invoke superclass constructor
+	 * 
+	 * @param model the model will stop command apply
+	 */
 	public StopCommand(Model model) {
 		super(model);
-		// TODO Auto-generated constructor stub
 	}
-	
+
+	/**
+	 * stop the simulation, add notify the listener
+	 */
 	public void execute() {
 		Simulation simulation = (Simulation) model;
 		simulation.stop();

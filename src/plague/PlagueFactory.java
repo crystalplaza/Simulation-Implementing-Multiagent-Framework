@@ -1,25 +1,31 @@
-/*
- /*
- * Edit history: 
- * Yunlin, 4/12: created
- * Yunlin, 4/13: added method
- */
-
-
 package plague;
-
 
 import mvc.*;
 import simstation.*;
 
-
+/***
+ * PlagueFactory extends superclass SimulationFactory. It contains MakeModel(),
+ * and getView() to create a model and get plagueview
+ * 
+ * @author xiaoli
+ *
+ */
 public class PlagueFactory extends SimulationFactory {
 
-	public Model makeModel() {return new Plague();}
-	
+	/**
+	 * override method, override makeModel() from superclass
+	 */
+	public Model makeModel() {
+		return new Plague();
+	}
+
+	/**
+	 * override method, override gerView() from superclass
+	 * 
+	 * @return return plague view
+	 */
 	public View getView(Model model) {
 		return new PlagueView(model);
 	}
-	
-	
+
 }

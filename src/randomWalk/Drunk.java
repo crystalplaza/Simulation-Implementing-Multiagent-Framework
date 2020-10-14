@@ -1,30 +1,37 @@
-/*
- * created by Xiaoli Tong on 4/9
- * revised by Xiaoli Tong on 4/13
- * revised by Xiaoli Tong on 4/15
- */
 
 package randomWalk;
 
 import simstation.*;
 import mvc.*;
-public class Drunk extends Agent{
 
-   private int speeds;
-   
+/**
+ * The drunk class extends superclass Agent, it updates its speed and heading.
+ * 
+ * @author xiaoli
+ *
+ */
+public class Drunk extends Agent {
+
+	private int speeds;
+
+	/**
+	 * constructor, invoke the super class constructor
+	 */
 	public Drunk() {
 		super();
-		//speeds = Utilities.rng.nextInt(8);	
 	}
-	
-	public  void update() {
+
+	/**
+	 * update() method, will update the heading and speed randomly
+	 */
+	public void update() {
 		int distance = 25;
 		Drunk neighbor = (Drunk) world.getNeighbor(this, distance);
-		if(neighbor != null) {
+		if (neighbor != null) {
 			heading = Heading.getRandomHeading();
-			speeds = Utilities.rng.nextInt(8)+1;
+			speeds = Utilities.rng.nextInt(8) + 1;
 		}
-		 move(speeds);
+		move(speeds);
 	}
-    
+
 }

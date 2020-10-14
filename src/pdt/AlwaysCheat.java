@@ -1,20 +1,25 @@
-/*
- * created by Xiaoli Tong on 4/13
- * 
- */
-
 package pdt;
 
-public class AlwaysCheat extends Strategy{
-	
-	
+/**
+ * create alwaysCheat strategy, extends from superclass. It contain one method,
+ * cooperate().
+ * 
+ * @author xiaoli
+ *
+ */
+public class AlwaysCheat extends Strategy {
+
+	/**
+	 * constructor, invoke superclass constructor
+	 */
 	public AlwaysCheat() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
-	public boolean cooperate()
-	{
+	/**
+	 * cooperate method, always return false.
+	 */
+	public boolean cooperate() {
 		return false;
 	}
 

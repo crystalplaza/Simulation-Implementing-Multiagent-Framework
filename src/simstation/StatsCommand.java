@@ -6,23 +6,28 @@ import javax.swing.JOptionPane;
 import mvc.*;
 import java.util.*;
 
-public class StatsCommand extends Command{
-
+/**
+ * statsCommand extends superclass, get statistics on simulation.
+ *
+ */
+public class StatsCommand extends Command {
+	/**
+	 * constructor, invoke the superclass constructor
+	 * 
+	 * @param model
+	 */
 	public StatsCommand(Model model) {
 		super(model);
-		// TODO Auto-generated constructor stub
 	}
-	
+
+	/**
+	 * get simulaton statistics. notify listener
+	 */
 	public void execute() {
 		Simulation simulation = (Simulation) model;
 		String[] massages = simulation.getStats();
-		/*
-		String[] massages = new String[2];
-		massages[0] = "#agent = " +Integer.toString(simulation.getAgentSize());
-		massages[1] = "clock = " + Integer.toString(simulation.getClock());
-		*/
+
 		Utilities.inform(massages);
 		simulation.changed();
 	}
 }
-

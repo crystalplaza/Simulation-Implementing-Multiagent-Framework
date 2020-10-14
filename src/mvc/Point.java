@@ -1,17 +1,48 @@
 package mvc;
 
+/**
+ * point will be used frequently when creating simulations. create a point class
+ * here, other model can just utilize it without create each point within each
+ * simulation.
+ * 
+ * @author xiaoli
+ *
+ */
 public class Point {
 	private double xc = 0, yc = 0;
+
+	/**
+	 * constructor, taking two value, x axis and y axis
+	 * 
+	 * @param xc the value on x axis
+	 * @param yc the value on y axis
+	 */
 	public Point(double xc, double yc) {
 		this.xc = xc;
 		this.yc = yc;
 	}
 
-	public double getXc() { return xc; }
-	public double getYc() { return yc; }
+	/**
+	 * getter, get the value on x axis
+	 * 
+	 * @return the value on x axis
+	 */
+	public double getXc() {
+		return xc;
+	}
 
+	/**
+	 * getter, get the value on y axis
+	 * 
+	 * @return the value on y axis
+	 */
+	public double getYc() {
+		return yc;
+	}
 
-	@Override
+	/**
+	 * override hashCode method
+	 */
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -23,7 +54,9 @@ public class Point {
 		return result;
 	}
 
-	@Override
+	/**
+	 * override equal method
+	 */
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -41,6 +74,6 @@ public class Point {
 
 	// map this from CRT coordinates to canvas coordinates
 	public Point transform(int canvasSize) {
-		return new Point(canvasSize / 2 * this.xc + canvasSize / 2, canvasSize/2 - canvasSize/2 * this.yc);
+		return new Point(canvasSize / 2 * this.xc + canvasSize / 2, canvasSize / 2 - canvasSize / 2 * this.yc);
 	}
 }

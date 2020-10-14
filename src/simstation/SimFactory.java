@@ -3,7 +3,18 @@ package simstation;
 
 import mvc.*;
 
-public interface SimFactory extends AppFactory{
+/**
+ * extends superclass, and override superclass method
+ * 
+ * @author xiaoli
+ *
+ */
+public interface SimFactory extends AppFactory {
+	/**
+	 * abstract method, override getView() method
+	 * 
+	 * @param model the view for the model
+	 * @return view
+	 */
 	public View getView(Model model);
-	//public String getStats();
 }

@@ -1,17 +1,24 @@
-/*
- * created by Xiaoli Tong on 4/14
- */
-
 package pdt;
 
 import simstation.*;
-public class CooperateVSLastCooperate extends Strategy{
 
+/**
+ * create a strategy class, CooperateVSLastCooperate. Cooperation depends on the
+ * owner's last response.
+ *
+ */
+public class CooperateVSLastCooperate extends Strategy {
+	/**
+	 * constructor, invoke superclass constructor
+	 */
 	public CooperateVSLastCooperate() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-	
+
+	/**
+	 * If the owner's last response is cooperate, it will return true. otherwise,
+	 * return false.
+	 */
 	public boolean cooperate() {
 		return owner.getLastResponse();
 	}

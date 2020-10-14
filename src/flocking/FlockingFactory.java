@@ -1,13 +1,19 @@
-/*
- * created by Zihui Chen on 4/14
- */
-
 package flocking;
 
 import mvc.*;
 import simstation.*;
 
-
+/**
+ * This class extends superclass, override makeModel
+ * 
+ * @author xiaoli
+ *
+ */
 public class FlockingFactory extends SimulationFactory {
-    public Model makeModel() {return new Flocking();}
+	/**
+	 * MakModel override the method in superclass
+	 */
+	public Model makeModel() {
+		return new Flocking();
+	}
 }
